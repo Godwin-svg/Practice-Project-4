@@ -13,7 +13,7 @@ jobs:
     
   test:
     runs-on: ubuntu-latest
-      steps:
+    steps:
       - name: Chekout Code
         uses: actions/checkout@v4
       - name: Install dependencies
@@ -24,7 +24,7 @@ jobs:
 
   deploy: 
     runs-on: ubuntu-latest
-      steps:
+    steps:
       - name: Chekout Code
         uses: actions/checkout@v4
       - name: Install dependencies
