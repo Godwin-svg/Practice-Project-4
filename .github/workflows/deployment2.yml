@@ -1,0 +1,33 @@
+name: DEployment Execercise 2
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chekout Code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run:  npm ci
+      - name: lint
+        run:  npm run lint
+    
+  test:
+    runs-on: ubuntu-latest
+      steps:
+      - name: Chekout Code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run:  npm ci
+      - name: Test
+        run:  npm test
+
+
+  deploy: 
+    runs-on: ubuntu-latest
+      steps:
+      - name: Chekout Code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run:  npm ci
+      - name: Deploy
+        run:  echo "deploying"
